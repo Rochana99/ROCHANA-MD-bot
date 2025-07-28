@@ -29,7 +29,7 @@ const filer = File.fromURL(`https://mega.nz/file/${sessdata}`)
 filer.download((err, data) => {
 if(err) throw err
 fs.writeFile(__dirname + '/auth_info_baileys/creds.json', data, () => {
-console.log("ROCHANA-MD Session downloaded ✅")
+console.log("SHANUWA-MD Session downloaded ✅")
 })})}
 
 const express = require("express");
@@ -39,7 +39,7 @@ const port = process.env.PORT || 8000;
 //=============================================
 
 async function connectToWA() {
-console.log("Connecting ROCHANA-MD...⏳️");
+console.log("Connecting SHANUWA-MD...⏳️");
 const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/auth_info_baileys/')
 var { version } = await fetchLatestBaileysVersion()
 
@@ -59,7 +59,7 @@ if (lastDisconnect.error.output.statusCode !== DisconnectReason.loggedOut) {
 connectToWA()
 }
 } else if (connection === 'open') {
-console.log('ROCHANA-MD Is Installing...🔥 ')
+console.log('SHANUWA-MD Is Installing...🔥 ')
 const path = require('path');
 fs.readdirSync("./plugins/").forEach((plugin) => {
 if (path.extname(plugin).toLowerCase() == ".js") {
@@ -67,13 +67,13 @@ require("./plugins/" + plugin);
 }
 });
 console.log('Plugins installed successful 🔌')
-console.log('ROCHANA-MD connected to whatsapp ✅')
+console.log('SHANUWA-MD connected to whatsapp ✅')
 
 let up = `
-╭⊱✫🔮 ROCHANA-MD 🔮✫⊱╮
-│✫➠ - *📂REPOSITORY NAME:* ROCHANA-MD
+╭⊱✫🔮 SHANUWA-MD 🔮✫⊱╮
+│✫➠ - *📂REPOSITORY NAME:* SHANUWA-MD
 │✫➠ - *📃DESCRIPTION:* ❁ᴡᴏʀʟᴅ ʙᴇsᴛ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ❁
-│✫➠ - *🛡️OWNER:* ʀᴏᴄʜᴀɴᴀ ᴊᴀɴᴀᴅᴇᴇᴘᴀ+ 
+│✫➠ - *🛡️OWNER:* ꜱʜᴀɴᴜᴋᴀ ꜱʜᴀᴍᴇᴇɴ+ 
 │✫➠ - *🌐 URL:* https://github.com
 ╰━━━━━━━━━━━━━━━━━╯
 
@@ -167,7 +167,7 @@ if (config.ANTI_LINK == "true"){
             
         if (isMe) return await reply("Link Derect but I cant Delete link")
         if(groupAdmins.includes(sender)) return
-            let repoInfo = `📌Link Detected ROCHANA-MD📌`;
+            let repoInfo = `📌Link Detected SHANUWA-MD📌`;
         await conn.sendMessage(from, { text: repoInfo }, { quoted: mek });  
         }}}
 if (config.ANTI_LINK == "true"){
@@ -176,7 +176,7 @@ if (config.ANTI_LINK == "true"){
             
         if (isMe) return await reply("Link Derect but I cant Delete link")
         if(groupAdmins.includes(sender)) return
-            let repoInfo = `📌 *Link Detected by ROCHANA-MD* 📌\n⚠️❗ *Anti link on....* ⚠️❗`;
+            let repoInfo = `📌 *Link Detected by SHANUWA-MD* 📌\n⚠️❗ *Anti link on....* ⚠️❗`;
         await conn.sendMessage(from, { text: repoInfo }, { quoted: mek });  
         }}}
 if (config.ANTI_BAD == "true"){
@@ -286,7 +286,7 @@ command.function(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, i
 })
 }
 app.get("/", (req, res) => {
-res.send("hey I am alive, ROCHANA-MD Is started✅");
+res.send("hey I am alive, SHANUWA-MD Is started✅");
 });
 app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
 setTimeout(() => {
